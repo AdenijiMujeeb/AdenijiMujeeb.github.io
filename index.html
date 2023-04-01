@@ -75,7 +75,7 @@
 										<article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 											<h3>ETL - Data ingestion from dynamoDB to Redshift</h3>
-											<p> In this architecture, the assumed scenerio was a gaming data and the following tools/services were used: <br>
+											<p> In this architecture, the assumed scenerio was a gaming data and the following AWS tools/services were used: <br>
 											<ul>
 											<li>Lambda Function</li>
 											<li>Amason S3</li>
@@ -100,7 +100,7 @@
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
 											<h3>Streaming data from neo4j to Redshift</h3>
-											<p>In this architecture, the assumed scenerio was a gaming data (streaming) and the following tools/services were used:
+											<p>In this architecture, the assumed scenerio was a gaming data (streaming) and the following AWS tools/services were used:
 											<ul>
 											<li>Lambda Function</li> 
 											<li>Amason Kinesis Firehose</li>
@@ -125,7 +125,7 @@
 										<article>
 											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 											<h3>ETL pipeline using on-prem database</h3>
-											<p>The purpose of this project is to perform data enrichment so that the total profit
+											<p> This project was tested on on-prem database using pgAdmin. The purpose of this project is to perform data enrichment so that the total profit
 												made on all car sales can be calculated. This diagram contains an ETL pipeline for performing data enrichment, 
 												the data source which are the CSV files. Surrogate keys were introduced into the data as the data was loaded into database 
 												in other to have unique records. I use docker, airflow and postgres. Docker was used to dockerize airflow and postgres,
@@ -137,7 +137,32 @@
 										<article>
 											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 											<h3>ETL pipeline using google cloud platform</h3>
-											<p>This is a proposed architecture for deploying figure 3 into cloud as the project was tested on on-prem database using pgAdmin</p>
+											<p>This is a proposed architecture for deploying figure 3 into cloud as the project was tested on on-prem database using pgAdmin.
+											In this architecture, the following GCP tools/services were used:
+											<ul>
+											<li>Data Stream</li>
+											<li>Cloud SQL</li>
+											<li>Cloud Storage</li> 
+											<li>Cloud Function</li>
+											<li>BigQuery</li>
+											<li>Google data studio</li>
+											<li>Cloud Composer</li>
+											<li>Dataproc</li>
+											<li>Cloud monitoring</li>
+											<li>Cloud Logging</li>
+											<li>Github</li>
+											<li>Terraform</li>
+											</ul>
+											For data source, the data was extracted from cloudSQL using datastream.
+											The extracted data was then stored in cloud storage, which is a highly scalable and durable storage solution provided by the cloud platform. This allowed for easy access and retrieval of the data when needed for processing.
+											I used cloud functions to run the Spark transformations on dataproc and Airflow DAGs on cloud composer. Cloud Functions is a serverless execution environment for building and connecting cloud services, which means that it automatically scales up or down to match the traffic, so you only pay for the compute time you consume.
+											After the transformations and DAGs, the data was loaded into BigQuery, a fully managed, serverless data warehouse provided by the cloud platform. BigQuery allows for the storage, processing, and analysis of large amounts of data in a fast and cost-effective manner.
+											For visualization, I used Google Data Studio, which is a powerful and interactive data visualization and reporting tool that allows for the creation of customized dashboards and reports. This provided a visual representation of the data, which was easier to understand and communicate to stakeholders.
+											I also integrated cloud monitoring for logging, Github for version control, Terraform for infrastructure provisioning, and Slack for notifications. Cloud monitoring allowed for real-time monitoring and alerting of the ETL pipeline, while Github provided version control and collaboration during the development process. 
+											Terraform allowed for infrastructure as code, which made it easier to manage and provision the infrastructure needed for the ETL pipeline. Lastly, Slack was used for notifications and communication in case of any issues or updates.
+											In summary, I used a combination of tools and services provided by the cloud platform to extract, transform, and load data, store it in a highly scalable and durable storage solution, and visualize it for better insights. 
+											Additionally, I used tools for monitoring, version control, infrastructure provisioning, and notifications to ensure the pipeline runs smoothly and efficiently.
+											</p>
 										</article>
 									</div>
 								</section>
