@@ -22,7 +22,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo">My Personal portfolio</a>
+									<a href="index.html" class="logo">My personal data engineering portfolio</a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -39,33 +39,27 @@
 											<h1>Hi, I’m ADENIJI Mujeeb Adekola<br /></h1>
 											<p>A Data Engineer</p>
 										</header>
-										<p> I have been in the data space for about 3 years now. I have previously worked as a data analyst at setraco nigeria limited
+										<p> I have been in the data space for quite some now. I have previously worked as a data analyst and as an analytics engineer
 											before I transitioned into data engineering. I am interested in knowing how things work on the engineering side of data and thus
-											the reason for my transitioning. I just completed a 6 months training in data engineering and its best practices. I am willing to use the
-											knowledge and expertise gained from my training to help companies build and maintain their data pipelines. I am open to an entry-level
-											data engineering position.<br />
-											Below are the architectures of some of the data pipeline that I have built.
+											the reason for my transitioning. I have about four years of work experience as a data engineer and I am willing to use the
+											knowledge and expertise gained from my previous experience to help companies build and maintain their data pipelines. I am open to a new position.<br />
+											Below are the architectures of some of the data pipeline that I have built personally, this does not contain any company's project or collaborations made.
 										</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
 									</div>
-									<!-- <span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span> -->
+									
 								</section>
 
 
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Previous works</h2>
+										<h2>Previous works(Personal)</h2>
 									</header>
 									<div class="posts">
 										<article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 											<h3>ETL - Data ingestion from dynamoDB to Redshift</h3>
-											<p> In this architecture, the data was ingested from DynamoDB to Redhsift. A lambda function
+											<p> In this architecture, the assumed scenerio was a gaming data. The data was ingested from DynamoDB to Redhsift(batch process). A lambda function
 												was invoked on Amazon S3 bucket so that whenever there is a new update, insert or delete in the
 												dynamoDB, the lambda function will trigger and replicate the data into S3 raw data bucket.
 												Then, another Lambda function was invoked on the S3 raw data bucket to run AWS step function to
@@ -75,14 +69,11 @@
 												The AWS Glue Job is used for transforming the data to meet up with the end user use-case and the
 												data will be finally ingested into Redshift (data warehouse). All this process are run on Step Function
 												in other to orchestrate and monitor our workflow.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
 											<h3>Streaming data from neo4j to Redshift</h3>
-											<p>In this architecture, the data was streamed using Amazon Kinesis Data Firehouse from the
+											<p>In this architecture, the assumed scenerio was a gaming data (streaming). The data was streamed using Amazon Kinesis Data Firehouse from the
 												assumed neo4j database that is running on Elastic Kubernete Service(EKS). A lambda function was
 												invoked on kinesis data firehose to deliver the streamed data into S3 raw bucket.
 												From S3 raw bucket, lambda function and eventbridge was used to trigger step function which will
@@ -91,23 +82,20 @@
 												when the DQ rules and data profiling successfully passes, the cleaned data will be sent to the
 												Amazon Redhift(data warehouse) and if otherwise a notification will be sent to the data engineer to
 												check for errors or perform data enrichment.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 											<h3>ETL pipeline using google cloud platform</h3>
 											<p>This is a proposed architecture for deploying figure 4 into cloud</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 											<h3>ETL pipeline using on-prem database</h3>
-											<p>This diagram contains an ETL pipeline for performing data enrichment, 
-												the data source which are the CSV files. I use docker, airflow and postgres. Airflow for orchestrating and scheduling the job,
+											<p>The purpose of this project is to perform data enrichment so that the total profit
+												made on all car sales can be calculated. This diagram contains an ETL pipeline for performing data enrichment, 
+												the data source which are the CSV files. Surrogate keys were introduced into the data as the data was loaded into database 
+												in other to have unique records. I use docker, airflow and postgres. Docker was used to dockerize airflow and postgres,
+												Airflow for orchestrating and scheduling the jobs(there were seven tasks all together).
 												I used postgres as the database and docker for containerising the application.
 												The code can be found here: <a href="https://github.com/AdenijiMujeeb/postgres-airflow">Link to repo</a>
 												</p>
@@ -133,75 +121,18 @@
 								</section>
 
 							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<!-- <section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section> -->
-
+								
+							
 							<!-- Section -->
 								<section>
 									<header class="major">
 										<h2>Get in touch</h2>
 									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									
 									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
+										<li class="icon solid fa-envelope"><a href="#">adenijimujeeb@gmail.com</a></li>
+										<li class="icon solid fa-phone">+447926534581</li>
+										<li class="icon solid fa-home">27 Pendrill Street. Hull, United Kingdom</li>
 									</ul>
 								</section>
 
